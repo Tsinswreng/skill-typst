@@ -2,7 +2,7 @@
 #let H = auto-heading
 \-\-\-
 
-name: tsinswreng-write-typst
+name: tsinswreng-typst
 
 description: 編寫typst(.typ)代碼時使用此skill
 
