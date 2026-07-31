@@ -44,6 +44,23 @@ description: 編寫typst(.typ)代碼時使用此skill
 	列表中一個元素內的文本換行時、要用`#[]`內容塊包裹
 ]
 
+#H[Todo處理][
+	格式是
+	```typst
+	#Todo[Todo描述][
+		正文
+	]
+	```
+	
+	你處理`#Todo`的時候,
+	處理完成之後要保留`#Todo`標記,
+	只能改正文,
+	不要改Todo描述。
+	待用戶確認無誤後,
+	由用戶自行移除待辦標記。
+	
+]
+
 #H[綜合示例][
 ```typ
 //自動標題庫
@@ -51,6 +68,7 @@ description: 編寫typst(.typ)代碼時使用此skill
 #let H = auto-heading
 //自製段落
 #let P(C) = {C}
+#let Todo(Title, Body)={}
 #H[Typst示例][
 	#H[北風和太陽][
 		#P[
