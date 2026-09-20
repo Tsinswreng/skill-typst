@@ -45,7 +45,9 @@ description: 編寫typst(.typ)代碼時使用此skill
 
 ## Todo處理
 
-格式是
+`#Todo`是用戶對文章的批註, 通常表示此處待改。
+
+`#Todo`格式是
 
 ```typst
 #Todo[Todo描述][
@@ -53,7 +55,23 @@ description: 編寫typst(.typ)代碼時使用此skill
 ]
 ```
 
-你處理`#Todo`的時候, 處理完成之後要保留`#Todo`標記, 只能改正文, 不要改Todo描述。 待用戶確認無誤後, 由用戶自行移除待辦標記。
+你處理`#Todo`的時候, 處理完成之後把`#Todo`標記改成`#Wip`, 只能改正文, 不要改Todo描述。 待用戶確認無誤後, 由用戶自行移除待辦標記。
+
+例: 改前:
+
+```typst
+#Todo[有錯字][
+	我門要...
+]
+```
+
+改後:
+
+```typst
+#Wip[有錯字][
+	我們要...
+]
+```
 
 ## 綜合示例
 
@@ -64,6 +82,7 @@ description: 編寫typst(.typ)代碼時使用此skill
 //自製段落
 #let P(C) = {C}
 #let Todo(Title, Body)={}
+#let Wip(Title, Body)={}
 #H[Typst示例][
 	#H[北風和太陽][
 		#P[
